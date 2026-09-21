@@ -1,0 +1,12 @@
+import streamlit as st
+
+def base_layout():
+    st.markdown("""
+            <style>
+                .stApp {
+                background-color: #5865F2 !important;    
+                }
+
+            </style>
+                """
+    , unsafe_allow_html=True)
