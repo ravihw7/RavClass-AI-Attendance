@@ -8,11 +8,11 @@ def style_background_home():
         <style>
 
                 .stApp {
-                    background: #964e6a !important;
+                    background: #5865F2 !important;
                 }
 
                 .stApp div[data-testid="stColumn"]{
-                    background-color:#964e6a !important;
+                    background-color:#E0E3FF !important;
                     padding:2.5rem !important;
                     border-radius: 5rem !important;
                     }
@@ -28,7 +28,7 @@ def style_background_dashboard():
         <style>
 
                 .stApp {
-                    background: #964e6a !important;
+                    background: #E0E3FF !important;
                 }
 
         </style>  
@@ -88,7 +88,7 @@ def style_base_layout():
 
             button[kind="secondary"]{
                 border-radius: 1.5rem !important;
-                background-color: #4e9694 !important;
+                background-color: #EB459E !important;
                 color: white !important;
                 padding: 10px 20px !important;
                 border: none !important;
