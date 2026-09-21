@@ -1,4 +1,4 @@
 import streamlit as st
 
-def main():
+def teacher_screen():
     st.header("Teacher Screen")
