@@ -34,3 +34,33 @@ def get_face_embeddings(image_np):
 
         encodings.append(np.array(face_descriptor))
     return encodings
+
+
+@st.cache_resource
+def get_trained_model():
+    X = []
+    y = []
+
+
+    student_db = get_all_students()
+
+    if not student_db:
+        return None
+    
+    for student in student_db:
+        embedding = student.get('face_embedding')
+        if embedding:
+            X.append(np.array(embedding))
+            y.append(student.get('student_id'))
+
+    if len(X) ==0:
+        return 0
+    
+    clf = SVC(kernel='linear', probability=True, class_weight='balanced')
+
+    try:
+        clf.fit(X, y)
+    except ValueError:
+        pass
+
+    return {'clf': clf, 'X':X, "y":y}
