@@ -64,3 +64,41 @@ def get_trained_model():
         pass
 
     return {'clf': clf, 'X':X, "y":y}
+
+def train_classifier():
+    st.cache_resource.clear()
+    model_data = get_trained_model()
+    return bool(model_data)
+
+def predict_attendance(class_image_np):
+    encodings = get_face_embeddings(class_image_np)
+
+    detected_student = {}
+
+
+    model_data = get_trained_model()
+
+    if not model_data:
+        return detected_student, [], len(encodings)
+    
+    clf = model_data['clf']
+    X_train = model_data['X']
+    y_train = model_data['y']
+
+    all_students = sorted(list(set(y_train)))
+
+    for encoding in encodings:
+        if len(all_students)>= 2:
+            predicted_id= int(clf.predict([encoding])[0])
+        else:
+            predicted_id = int(all_students[0])
+
+        student_embedding = X_train[y_train.index(predicted_id)]
+
+        best_match_score = np.linalg.norm(student_embedding - encoding)
+
+        resemblance_threshold = 0.6
+
+        if best_match_score <= resemblance_threshold:
+            detected_student[predicted_id] = True
+    return detected_student, all_students, len(encodings)
