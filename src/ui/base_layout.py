@@ -16,7 +16,11 @@ def style_background_home():
                     padding:2.5rem !important;
                     border-radius: 5rem !important;
                     }
-        </style>  
+
+                .stApp div[data-testid="stColumn"] h2{
+                    color: black !important;
+                    }
+        </style>
 
                 """
             ,unsafe_allow_html=True)
@@ -31,7 +35,31 @@ def style_background_dashboard():
                     background: #E0E3FF !important;
                 }
 
-        </style>  
+                div[data-testid="stHeading"] h2 {
+                    color: black !important;
+                }
+
+                div[data-testid="stTextInput"] div[data-baseweb="input"],
+                div[data-testid="stTextInput"] div[data-baseweb="base-input"] {
+                    background-color: white !important;
+                }
+
+                div[data-testid="stTextInput"] input {
+                    background-color: white !important;
+                    color: black !important;
+                }
+
+                div[data-testid="stTextInput"] input::placeholder {
+                    color: #777777 !important;
+                    opacity: 1 !important;
+                }
+
+                div[data-testid="stTextInput"] label,
+                div[data-testid="stTextInput"] label p {
+                    color: black !important;
+                }
+
+        </style>
 
                 """
             ,unsafe_allow_html=True)
