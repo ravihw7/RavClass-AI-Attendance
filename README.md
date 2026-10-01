@@ -12,7 +12,7 @@ Face recognition and voice recognition attendance for classrooms, built with Str
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
 ![dlib](https://img.shields.io/badge/dlib-Face%20Recognition-008000)
 
-<img src="screenshots/home.png" alt="RavClass home screen" width="720"/>
+<img src="assests/home.png" alt="RavClass home screen" width="420"/>
 
 </div>
 
@@ -57,15 +57,15 @@ All profiles, subjects, enrollments and attendance logs live in **Supabase (Post
 
 | Teacher Login | Teacher Registration |
 |:---:|:---:|
-| <img src="screenshots/teacher-login.png" width="400"/> | <img src="screenshots/teacher-register.png" width="400"/> |
+| <img src="assests/teacher-login.png" width="350"/> | <img src="assests/teacher-register.png" width="350"/> |
 
 | Take AI Attendance | Manage Subjects |
 |:---:|:---:|
-| <img src="screenshots/take-attendance.png" width="400"/> | <img src="screenshots/manage-subjects.png" width="400"/> |
+| <img src="assests/take-attendance.png" width="350"/> | <img src="assests/manage-subjects.png" width="350"/> |
 
 | Attendance Records | Student Dashboard |
 |:---:|:---:|
-| <img src="screenshots/attendance-records.png" width="400"/> | <img src="screenshots/student-dashboard.png" width="400"/> |
+| <img src="assests/attendance-records.png" width="350"/> | <img src="assests/student-dashboard.png" width="350"/> |
 
 ---
 
